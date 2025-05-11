@@ -1,0 +1,127 @@
+
+
+ .img-box {
+	height: 200px;
+	margin-bottom: 20px;
+	width: 100%;
+	position: relative;
+  /* overflow: hidden; */
+}
+.img-box img {
+
+	max-width: 100%;
+	max-height: 100%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+  /* width: 100%; */
+  transition: transform 0.4s ease;
+}
+.thumb-wrapper {
+  overflow: hidden;
+  transition: transform 0.3s ease;
+	padding: 25px 15px;
+	background: #fff;
+	border-radius: 6px;
+	text-align: center;
+	position: relative;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+.thumb-wrapper:hover .img-box img{
+  transform: scale(1.1);
+}
+.thumb-wrapper:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+.wish-icon {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 99;
+	cursor: pointer;
+	font-size: 16px;
+	color: #abb0b8;
+}
+
+.wish-icon .fa-heart {
+	color: #ff6161;
+}
+.thumb-content .btn {
+	color: var(--primary-color);
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: none;
+	border: 1px solid var(--primary-color);
+	padding: 6px 14px;
+	margin-top: 5px;
+	line-height: 16px;
+	border-radius: 20px;
+}
+.thumb-content .btn:hover, .thumb-content .btn:focus {
+	color: #fff;
+	background: var(--primary-color);
+	box-shadow: none;
+}
+.thumb-content .btn i {
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 5px;
+}
+.star-rating li {
+	padding: 0;
+}
+.star-rating i {
+	font-size: 14px;
+	color: #ffc000;
+}
+
+.item-price {
+	font-size: 13px;
+	padding: 2px 0;
+}
+.item-price span {
+	opacity: 0.7;
+	margin-right: 5px;
+  text-decoration: line-through;
+}
+.thumb-wrapper h4 {
+  font-size: 1rem;
+  height: 40px;
+}
+/* .thumb-wrapper {
+  position: relative;
+} */
+.thumb-content {
+  position: relative;
+}
+
+.add-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none; /* evita clics cuando está oculto */
+  z-index: 10;
+}
+.thumb-wrapper:hover .add-btn {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.star-rating {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.thumb-wrapper:hover .star-rating {
+  opacity: 0;
+  visibility: hidden;
+}

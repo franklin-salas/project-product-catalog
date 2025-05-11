@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: rgb(237, 106, 15);
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --text-color: #333;
+  --background-color:#e2eaef;
+  --hover-primay-color:rgb(192, 78, 14);
+}
+
+
+
+body {
+	background: var(--background-color);
+	font-family: "Open Sans", sans-serif;
+}
+
+

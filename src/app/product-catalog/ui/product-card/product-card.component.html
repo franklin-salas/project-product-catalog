@@ -1,0 +1,26 @@
+<div class="thumb-wrapper">
+  <span class="wish-icon">
+    <i
+    class="fa"
+    [ngClass]="isFavorite ? 'fa-heart' : 'fa-heart-o'"
+    (click)="toggleFavorite()"
+  ></i>
+  </span>
+  <div class="img-box">
+    <img [src]="image" alt="{{ name }}" class="img-fluid">
+  </div>
+  <div class="thumb-content">
+    <h4>{{ name }}</h4>
+    <div class="star-rating">
+      <ul class="list-inline">
+        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+      </ul>
+    </div>
+    <p class="item-price"><span>{{ price | currency }}</span> <b>{{ discountPrice | currency }}</b></p>
+    <button (click)="onAddClick()" class="btn btn-primary px-5 add-btn">Agregar</button>
+  </div>
+</div>

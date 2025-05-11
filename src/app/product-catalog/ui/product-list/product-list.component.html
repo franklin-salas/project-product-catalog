@@ -1,0 +1,19 @@
+<div class="container">
+	<h2>Galeria de <b>Productos</b></h2>
+    <div class="row">
+      <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 mt-2 mb-3" *ngFor="let product of products">
+        <app-product-card
+        [id]="product.id"
+        [name]="product.name"
+        [price]="product.price"
+        [discountPrice]="product.discountPrice"
+        [image]="product.image"
+        (addToCart)="onProductAdded($event)"
+        >
+        </app-product-card>
+      </div>
+    </div>
+</div>
+
+
+
