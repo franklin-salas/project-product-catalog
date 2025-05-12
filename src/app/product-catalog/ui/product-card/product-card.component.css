@@ -1,7 +1,7 @@
 
 
  .img-box {
-	height: 200px;
+	height: 180px;
 	margin-bottom: 20px;
 	width: 100%;
 	position: relative;
@@ -84,11 +84,11 @@
 	font-size: 13px;
 	padding: 2px 0;
 }
-.item-price span {
+/* .item-price span {
 	opacity: 0.7;
 	margin-right: 5px;
   text-decoration: line-through;
-}
+} */
 .thumb-wrapper h4 {
   font-size: 1rem;
   height: 40px;
@@ -124,4 +124,12 @@
 .thumb-wrapper:hover .star-rating {
   opacity: 0;
   visibility: hidden;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
 }

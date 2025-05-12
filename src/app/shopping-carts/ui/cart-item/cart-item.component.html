@@ -1,1 +1,26 @@
-<p>cart-item works!</p>
+<div class="card mb-3 p-3">
+  <div class="row align-items-center">
+
+    <!-- Imagen: col-2 -->
+    <div class="col-2">
+      <img [src]="cartItem.product.image" class="img-fluid rounded" [alt]="cartItem.product.title">
+    </div>
+
+    <!-- Título + eliminar + cantidad: col-8 -->
+    <div class="col-7">
+      <h5 class="mb-1 line-clamp-2">{{ cartItem.product.title }}</h5>
+      <a class="text-danger small mb-2 btn"(click)="remove()">✖ Eliminar</a>
+
+    </div>
+    <div class="col-3 d-flex align-items-center  gap-3">
+      <div class="d-flex align-items-center">
+        <button class="btn btn-outline-secondary btn-sm me-1" (click)="decrease()">−</button>
+        <span>{{ cartItem.quantity }}</span>
+        <button class="btn btn-outline-secondary btn-sm ms-1" (click)="increase()" >+</button>
+      </div>
+      <div class="fw-bold">
+        {{ cartItem.product.price * cartItem.quantity | currency }}
+      </div>
+    </div>
+  </div>
+</div>

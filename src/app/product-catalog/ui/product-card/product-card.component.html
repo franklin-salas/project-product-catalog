@@ -7,10 +7,10 @@
   ></i>
   </span>
   <div class="img-box">
-    <img [src]="image" alt="{{ name }}" class="img-fluid">
+    <img [src]="product.image" alt="{{ product.title }}" class="img-fluid">
   </div>
   <div class="thumb-content">
-    <h4>{{ name }}</h4>
+    <h4 class="line-clamp-2">{{ product.title }}</h4>
     <div class="star-rating">
       <ul class="list-inline">
         <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -20,7 +20,7 @@
         <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
       </ul>
     </div>
-    <p class="item-price"><span>{{ price | currency }}</span> <b>{{ discountPrice | currency }}</b></p>
+    <p class="item-price"><span>{{ product.price | currency }}</span></p>
     <button (click)="onAddClick()" class="btn btn-primary px-5 add-btn">Agregar</button>
   </div>
 </div>

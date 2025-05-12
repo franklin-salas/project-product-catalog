@@ -1,5 +1,6 @@
 import { Component ,Input,Output,EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Product } from '../../../shared/interfaces/model.interface';
 
 @Component({
   selector: 'app-product-card',
@@ -9,16 +10,11 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductCardComponent {
   isFavorite = false;
-  @Input() id!: number;
-  @Input() name!: string;
-  @Input() description!: string;
-  @Input() price!: number;
-  @Input() discountPrice!: number;
-  @Input() image!: string;
-  @Output() addToCart = new EventEmitter<string>();
+  @Input() product!: Product;
+  @Output() addToCart = new EventEmitter<Product>();
 
   onAddClick() {
-    this.addToCart.emit(this.name); // Emitimos el nombre del producto
+    this.addToCart.emit(this.product); // Emitimos el nombre del producto
   }
   toggleFavorite() {
     this.isFavorite = !this.isFavorite;
