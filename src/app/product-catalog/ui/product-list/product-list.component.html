@@ -1,5 +1,11 @@
 <div class="container">
 	<h2>Galeria de <b>Productos</b></h2>
+
+  <div class="d-flex justify-content-center mb-3">
+    <div style="max-width: 500px; width: 100%;">
+      <app-search (search)="onSearch($event)"></app-search>
+    </div>
+  </div>
     <div class="row">
       <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 mt-2 mb-3" *ngFor="let product of products">
         <app-product-card
