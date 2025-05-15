@@ -1,6 +1,7 @@
 import { Component ,Input,Output,EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../../shared/interfaces/model.interface';
+import { RouterLink ,Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-card',
@@ -13,10 +14,17 @@ export class ProductCardComponent {
   @Input() product!: Product;
   @Output() addToCart = new EventEmitter<Product>();
 
-  onAddClick() {
+  constructor(public router: Router) {}
+
+  onAddClick(event:Event) {
+    event.stopPropagation();
+    event.preventDefault();
+
     this.addToCart.emit(this.product); // Emitimos el nombre del producto
   }
-  toggleFavorite() {
+  toggleFavorite(event:Event) {
+    event.stopPropagation();
+    event.preventDefault();
     this.isFavorite = !this.isFavorite;
   }
 }
