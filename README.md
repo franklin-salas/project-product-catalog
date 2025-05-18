@@ -21,10 +21,10 @@ cd project-product-catalog
 
 Para iniciar el servidor de desarrollo local, ejecuta:
 
-```bash
 npm install
 ng serve
 
+```
 ## Archivos de configuración de rutas
 
 La configuración de rutas del proyecto está distribuida en los siguientes archivos:
