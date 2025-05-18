@@ -1,0 +1,15 @@
+.btn {
+	color: var(--primary-color);
+	text-transform: uppercase;
+	border: 1px solid var(--primary-color);
+  transition: all ease-in-out 6ms;
+}
+.btn:hover,.btn:focus {
+	color: #fff;
+	background: var(--primary-color);
+	box-shadow: none;
+}
+
+.btn:active {
+  border-color: var(--primary-color);
+}

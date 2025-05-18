@@ -61,6 +61,7 @@
 	margin-top: 5px;
 	line-height: 16px;
 	border-radius: 20px;
+  transition: all ease-in-out 6ms;
 }
 .thumb-content .btn:hover, .thumb-content .btn:focus {
 	color: #fff;

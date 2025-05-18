@@ -9,8 +9,14 @@ import { PRODUCTS } from '../../shared/data/products.data';
 export class ProductService {
 
   constructor() { }
- getProducts(): Observable<Product[]> {
+
+  getProducts(): Observable<Product[]> {
     return of(PRODUCTS);
   }
+
+  getProducto(id: number): Observable<Product | undefined> {
+    return of(PRODUCTS.find(producto => producto.id === id));
+  }
+
 
 }
