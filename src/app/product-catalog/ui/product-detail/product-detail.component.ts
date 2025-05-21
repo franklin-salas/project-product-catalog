@@ -17,6 +17,7 @@ export class ProductDetailComponent {
   private activatedRoute = inject(ActivatedRoute);
   private productService = inject(ProductService);
    private cartService = inject(CartService);
+   loading = true;
   constructor(){
     this.activatedRoute.params
     .pipe(
@@ -27,6 +28,7 @@ export class ProductDetailComponent {
     )
     .subscribe(producto => {
       this.product = producto!;
+      this.loading =false;
     });
   }
 

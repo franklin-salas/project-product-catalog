@@ -19,3 +19,80 @@
 .btn:active {
   border-color: var(--primary-color);
 }
+
+
+.product-skeleton {
+  display: flex;
+  background-color: #e9f1f6;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.skeleton-image {
+  width: 250px;
+  height: 300px;
+  border-radius: 8px;
+  background: #ccc;
+  animation: pulse 1.5s infinite;
+}
+
+.skeleton-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton-title,
+.skeleton-price,
+.skeleton-rating,
+.skeleton-button,
+.skeleton-text {
+  height: 20px;
+  border-radius: 4px;
+  background: #ccc;
+  animation: pulse 1.5s infinite;
+}
+
+.skeleton-title {
+  width: 60%;
+  height: 24px;
+}
+
+.skeleton-price {
+  width: 30%;
+}
+
+.skeleton-rating {
+  width: 40%;
+}
+
+.skeleton-button {
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.skeleton-text {
+  width: 90%;
+  height: 14px;
+}
+
+.skeleton-text.short {
+  width: 70%;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

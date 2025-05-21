@@ -1,21 +1,46 @@
-<div class="container">
-	<h2>Galeria de <b>Productos</b></h2>
+<div
+infiniteScroll
+[infiniteScrollDistance]="2"
+[infiniteScrollThrottle]="300"
+[scrollWindow]="true"
+(scrolled)="onScroll()">
+  <div class="container" >
+    <h2>Galeria de <b>Productos</b></h2>
 
-  <div class="d-flex justify-content-center mb-3">
-    <div style="max-width: 500px; width: 100%;">
-      <!-- <app-search (search)="onSearch($event)"></app-search> -->
-    </div>
-  </div>
-    <div class="row">
-      <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 mt-2 mb-3" *ngFor="let product of products">
-        <app-product-card
-        [product]="product"
-        (addToCart)="onProductAdded(product)"
-        >
-        </app-product-card>
+
+      <div class="row">
+
+        <div  *ngIf="loading" class="skeleton-grid">
+          <div class="skeleton-card" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]">
+            <div class="skeleton-heart"></div>
+            <div class="skeleton-image"></div>
+            <div class="skeleton-title"></div>
+            <div class="skeleton-stars"></div>
+            <div class="skeleton-price"></div>
+          </div>
+        </div>
+        <ng-container *ngIf="!loading"  >
+          <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 mt-2 mb-3" *ngFor="let product of products">
+            <app-product-card
+            [product]="product"
+            (addToCart)="onProductAdded(product)"
+            >
+            </app-product-card>
+          </div>
+          <div *ngIf="loading" class="loading-indicator">
+            Cargando más productos...
+          </div>
+          <div *ngIf="allLoaded" class="end-indicator">
+            No hay más productos para mostrar.
+          </div>
+        </ng-container>
+
       </div>
-    </div>
+  </div>
+
 </div>
+
+
 
 
 

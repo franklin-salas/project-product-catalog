@@ -1,4 +1,16 @@
-<div class="container py-4">
+<div *ngIf="loading" class="product-skeleton">
+  <div class="skeleton-image"></div>
+  <div class="skeleton-content">
+    <div class="skeleton-title"></div>
+    <div class="skeleton-price"></div>
+    <div class="skeleton-rating"></div>
+    <div class="skeleton-button"></div>
+    <div class="skeleton-text"></div>
+    <div class="skeleton-text short"></div>
+  </div>
+</div>
+
+<div *ngIf="!loading" class="container py-4">
   <div class="row">
     <!-- Imagen del producto -->
     <div class="col-md-6 text-center">
