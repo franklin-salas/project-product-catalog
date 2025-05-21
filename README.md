@@ -4,9 +4,12 @@ Este proyecto fue generado utilizando [Angular CLI](https://github.com/angular/a
 
 Repositorio en GitHub: [https://github.com/franklin-salas/project-product-catalog.git](https://github.com/franklin-salas/project-product-catalog.git)
 
-En este repositorio se encuentran las paractica-03, practica-04, practica-05 y practica-06
+En este repositorio se encuentran las paractica-03, practica-04, practica-05 y practica-06.
+
 rama
+
 main* - >practica-06
+
 La practica-06 ya ya esta en el main, requiere configuracion de Environments ya que consume directo de una api 'https://fakestoreapi.com'.
 
 ## Requisitos previos
