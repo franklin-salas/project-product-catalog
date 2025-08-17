@@ -8,7 +8,12 @@
     ></i>
     </span>
     <div class="img-box">
-      <img [src]="product.image" alt="{{ product.title }}" class="img-fluid">
+      <img
+        [src]="product.image"
+        alt="{{ product.title }}"
+        class="img-fluid"
+        loading="lazy"
+        >
     </div>
     <div class="thumb-content">
       <h4 class="line-clamp-2">{{ product.title }}</h4>
