@@ -2,14 +2,14 @@
   "hosting": [
     {
       "target": "dev",
-      "public": "dist/product-catalog",
+      "public": "dist/product-catalog/browser",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [{ "source": "**", "destination": "/index.html" }]
 
     },
     {
       "target": "prod",
-      "public": "dist/product-catalog",
+      "public": "dist/product-catalog/browser",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [{ "source": "**", "destination": "/index.html" }]
     }
