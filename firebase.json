@@ -9,7 +9,7 @@
     },
     {
       "target": "prod",
-      "public": "dist/tu-app",
+      "public": "dist/product-catalog",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [{ "source": "**", "destination": "/index.html" }]
     }
