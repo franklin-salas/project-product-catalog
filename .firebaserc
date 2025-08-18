@@ -9,7 +9,7 @@
           "ecomerce-d"
         ],
         "dev": [
-          "ecomerce-d"
+          "ecomerce-d-dev"
         ]
       }
     }
