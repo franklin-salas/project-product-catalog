@@ -1,0 +1,17 @@
+{
+  "hosting": [
+    {
+      "target": "dev",
+      "public": "dist/product-catalog",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [{ "source": "**", "destination": "/index.html" }]
+
+    },
+    {
+      "target": "prod",
+      "public": "dist/tu-app",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [{ "source": "**", "destination": "/index.html" }]
+    }
+  ]
+}

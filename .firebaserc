@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "ecomerce-d"
+  },
+  "targets": {
+    "ecomerce-d": {
+      "hosting": {
+        "prod": [
+          "ecomerce-d"
+        ],
+        "dev": [
+          "ecomerce-d"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
