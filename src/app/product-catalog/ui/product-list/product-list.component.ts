@@ -5,6 +5,7 @@ import { Product } from '../../../shared/interfaces/model.interface';
 import { ProductService } from '../../services/product.service';
 import { CartService } from '../../../shopping-carts/services/cart.service';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { delay } from 'rxjs';
 // import { SearchComponent } from '../../../shared/ui/search/search.component';
 
 @Component({
@@ -24,7 +25,9 @@ export class ProductListComponent implements OnInit {
   itemsPerPage = 8;
   allLoaded = false;
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(data => {
+    this.productService.getProducts()
+    .pipe(delay(6500)) // agrega 1.5 segundos artificiales
+    .subscribe(data => {
       this.loading = false;
       this.data = data;
       this.loadMore();
