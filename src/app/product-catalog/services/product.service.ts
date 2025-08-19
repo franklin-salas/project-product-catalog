@@ -15,7 +15,7 @@ export class ProductService {
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.apiUrl}/products`) .pipe(
-      delay(5500) // espera 1.5 segundos antes de emitir la respuesta
+      delay(3500) // espera 1.5 segundos antes de emitir la respuesta
     );
   }
 
