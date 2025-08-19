@@ -25,9 +25,11 @@ export class ProductListComponent implements OnInit {
   allLoaded = false;
   ngOnInit(): void {
     this.productService.getProducts().subscribe(data => {
-      this.loading = false;
-      this.data = data;
-      this.loadMore();
+      setTimeout(() => {
+        this.loading = false;
+        this.data = data;
+        this.loadMore();
+      }, 1500);
     });
   }
 
@@ -51,7 +53,7 @@ export class ProductListComponent implements OnInit {
   }
 
   onScroll(): void {
-    console.log('Scroll detectado');
+
     this.loadMore();
   }
   onProductAdded(product: Product) {
