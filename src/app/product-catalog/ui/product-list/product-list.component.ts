@@ -25,11 +25,11 @@ export class ProductListComponent implements OnInit {
   allLoaded = false;
   ngOnInit(): void {
     this.productService.getProducts().subscribe(data => {
-      setTimeout(() => {
+
         this.loading = false;
         this.data = data;
         this.loadMore();
-      }, 4500);
+
     });
   }
 
