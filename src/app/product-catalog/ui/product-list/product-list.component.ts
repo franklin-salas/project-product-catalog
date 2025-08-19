@@ -29,7 +29,7 @@ export class ProductListComponent implements OnInit {
         this.loading = false;
         this.data = data;
         this.loadMore();
-      }, 1500);
+      }, 3500);
     });
   }
 
